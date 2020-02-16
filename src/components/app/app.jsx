@@ -4,15 +4,15 @@ import WelcomeScreen from '../welcome-screen/welcome-screen.jsx';
 
 
 const App = (props) => {
-  const {errorsCount, onGameStart} = props;
+  const {errorsCount, onWelcomeButtonClick} = props;
   return (
-    <WelcomeScreen errorsCount={errorsCount} onGameStart={onGameStart} />
+    <WelcomeScreen errorsCount={errorsCount} onWelcomeButtonClick={onWelcomeButtonClick} />
   );
 };
 
 App.propTypes = {
   errorsCount: PropTypes.number.isRequired,
-  onGameStart: PropTypes.func.isRequired
+  onWelcomeButtonClick: PropTypes.func.isRequired
 };
 
 export default App;
