@@ -1,11 +1,11 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import WelcomeScreen from '../welcome-screen/welcome-screen.jsx';
+import App from './app.jsx';
 
 it(`Should App render correctly`, () => {
   const tree = renderer
   .create(
-      <WelcomeScreen errorsCount={3} onWelcomeButtonClick={() => {}}/>
+      <App errorsCount={3} onWelcomeButtonClick={() => {}}/>
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
