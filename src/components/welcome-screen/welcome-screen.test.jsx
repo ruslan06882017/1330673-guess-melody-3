@@ -2,15 +2,10 @@ import React from "react";
 import renderer from "react-test-renderer";
 import WelcomeScreen from '../welcome-screen/welcome-screen.jsx';
 
-const errorsCount = 3;
-const onWelcomeButtonClick = () => {
-  return true;
-};
-
-it(`<WelcomeScreen /> should render HTML`, () => {
+it(`Should WelcomeScreen render correctly`, () => {
   const tree = renderer
   .create(
-      <WelcomeScreen errorsCount={errorsCount} onWelcomeButtonClick={onWelcomeButtonClick} />
+      <WelcomeScreen errorsCount={3} onWelcomeButtonClick={() => {}} />
   ).toJSON();
 
   expect(tree).toMatchSnapshot();
